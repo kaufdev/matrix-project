@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id "application"
+}
+
+ext {
+    javaMainClass = "org/example/Num6"
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.github.haifengl:smile-core:2.4.0'
+    implementation 'com.github.haifengl:smile-mkl:2.5.0'
+
+    implementation fileTree(dir: 'libs', include: '*.jar')
+}
